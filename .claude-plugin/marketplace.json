@@ -1,0 +1,23 @@
+{
+  "name": "promptneurons-marketplace",
+  "owner": {
+    "name": "John Goodwin",
+    "email": "john@promptneurons.com"
+  },
+  "metadata": {
+    "description": "Skills, workflows, and productivity tools",
+    "version": "0.0.1"
+  },
+  "plugins": [
+    {
+      "name": "promptneurons",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/promptneurons/promptneurons.git"
+      },
+      "description": "Core skills library: Under Development",
+      "version": "0.0.1",
+      "strict": true
+    }
+  ]
+}
