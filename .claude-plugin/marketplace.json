@@ -18,6 +18,16 @@
       "description": "Core skills library: Under Development",
       "version": "0.0.1",
       "strict": true
+    },
+    {
+      "name": "nqa1-governance",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/promptneurons/nqa1-governance.git"
+      },
+      "description": "NQA-1 governance workflows as Petri Nets over OWL ontologies",
+      "version": "0.0.1",
+      "strict": true
     }
   ]
 }
