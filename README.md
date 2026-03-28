@@ -8,10 +8,35 @@ This repo is a **catalog** — it lists available plugins and where to find them
 
 ## Available Plugins
 
-| Plugin | Description | Access |
-|--------|-------------|--------|
-| [promptneurons](https://github.com/promptneurons/promptneurons) | Core skills library (install.md generator, etc.) | P100 (Public) |
-| nqa1-governance | NQA-1 governance workflows as Petri Nets over OWL ontologies | H100/H200 (Private) |
+| Plugin | Skills | Access |
+|--------|--------|--------|
+| [promptneurons](https://github.com/promptneurons/promptneurons) | `install-md-generator`, `agent-scaffolding` | P100 (Public) |
+| nqa1-governance | NQA-1 governance workflows | H100/H200 (Private) |
+
+## For Gemini / Antigravity IDE Users
+
+### Install All Public Skills (2 commands)
+
+```bash
+git clone https://github.com/promptneurons/promptneurons.git
+cp -r promptneurons/.gemini/skills/* .gemini/skills/
+```
+
+Windows (PowerShell):
+```powershell
+git clone https://github.com/promptneurons/promptneurons.git
+Copy-Item -Recurse -Force promptneurons\.gemini\skills\* .gemini\skills\
+```
+
+### Scaffold a Multi-Agent Workspace
+
+After installing, ask the Antigravity agent:
+
+> "Set up this project as a multi-agent workspace"
+
+The **agent-scaffolding** skill will create `AGENTS.md`, `.agents/`, `.claude/`, and `.gemini/` directories — a complete multi-agent workspace compatible with both Claude Code and Gemini/Antigravity.
+
+See the [promptneurons plugin README](https://github.com/promptneurons/promptneurons) for more details.
 
 ## For Claude Code Users
 
@@ -20,31 +45,6 @@ claude plugin marketplace add https://github.com/promptneurons/promptneurons-mar
 claude plugin marketplace list
 claude plugin install promptneurons
 ```
-
-## For Gemini / Antigravity IDE Users
-
-Each plugin repo ships with Gemini-ready skills in `.gemini/skills/`. To install:
-
-```bash
-# Clone the plugin repo:
-git clone https://github.com/promptneurons/promptneurons.git
-
-# Copy skills to your workspace:
-mkdir -p .gemini/skills
-cp -r promptneurons/.gemini/skills/* .gemini/skills/
-
-# Windows (PowerShell):
-New-Item -ItemType Directory -Force -Path .gemini\skills
-Copy-Item -Recurse -Force promptneurons\.gemini\skills\* .gemini\skills\
-```
-
-Or use the CLI tool:
-
-```bash
-npx pn-antigravity-plugin install promptneurons
-```
-
-See individual plugin READMEs for detailed setup instructions.
 
 ## Access Tiers
 
